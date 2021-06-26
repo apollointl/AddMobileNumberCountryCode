@@ -1,0 +1,53 @@
+﻿<Window x:Class="AddMobileNumberCountryCode.App.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:AddMobileNumberCountryCode.App"
+    mc:Ignorable="d"
+    Title="MainWindow"
+    Height="450"
+    Width="800"
+>
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <StackPanel x:Name="appStackPanel" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Button
+                    Click="OpenFile"
+                    Content="Open CSV File…"
+                    Height="30"
+                    HorizontalAlignment="Left"
+                    Margin="10"
+                    Width="100"
+                />
+                <TextBlock x:Name="fileNameTxt" Margin="15" TextWrapping="Wrap" Text="fileNameTxt"/>
+            </StackPanel>
+            <TextBlock
+                Margin="10"
+                TextWrapping="Wrap"
+                Text="Specify the column containing the phone number:"
+            />
+            <StackPanel Orientation="Horizontal">
+                <ComboBox
+                    x:Name="columnHeadersComboBox"
+                    IsEnabled="False"
+                    Margin="10,0,10,10"
+                    SelectionChanged="SetColumnIndex"
+                    Width="120"
+                />
+                <TextBlock x:Name="colFirstValueTxt" Text=""  />
+            </StackPanel>
+            <Button
+                x:Name="convertButton"
+                Click="Convert"
+                Content="Convert"
+                Height="30"
+                IsEnabled="False"
+                Margin="10"
+                Width="100"
+                HorizontalAlignment="Left"
+                FontWeight="Bold"
+            />
+        </StackPanel>
+    </Grid>
+</Window>
