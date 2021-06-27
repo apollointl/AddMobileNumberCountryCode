@@ -10,8 +10,8 @@ using static AddMobileNumberCountryCode.Utils.FileOps;
 namespace AddMobileNumberCountryCode.App
 {
 	/// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+	/// Interaction logic for MainWindow.xaml
+	/// </summary>
 	public partial class MainWindow : Window
 	{
 		public string FileName { get; private set; }
